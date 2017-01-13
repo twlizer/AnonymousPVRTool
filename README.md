@@ -1,4 +1,2 @@
-service.pvrtools
-================
-
-A simple addon to extend kodi iptv simple pvr addon
+# AnonymousPVRTool
+PVR Tool for merging EXMTL and M3U lists as a addon inside kodi on a timer
