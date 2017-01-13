@@ -51,8 +51,7 @@
 		<setting id="merge_lists_now" type="action" label="Merge lists now" action="XBMC.RunScript($CWD/lib/update_lists.py,xmltvmerger)" />
 		<setting id="merge_epgs_now" type="action" label="Merge EPGS now" action="XBMC.RunScript($CWD/lib/update_xml.py,xmltvmerger)" />
 		<setting id="merge_epgs_lists_now" type="action" label="Merge lists + epgs and restart pvr" action="XBMC.RunScript($CWD/lib/update_all.py,xmltvmerger)" />
-		<setting id="restart_pvr" type="action" label="Start PVR" action="XBMC.StartPVRManager" />
-		<setting id="restart_pvr" type="action" label="Stop PVR" action="XBMC.StopPVRManager" />
+		<setting id="restart_pvr" type="action" label="Restart PVR" action="XBMC.StartPVRManager" />
 		
   </category>
   
