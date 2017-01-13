@@ -80,5 +80,5 @@ def m3u_merge(notification=False):
 		i+=1
 	print "M3u8 lists have been merged..."
 	if notification:
-		xbmc.executebuiltin("Notification(%s,%s,%i,%s)" % ('PVR Tools', 'Lists have been merged!', 1,os.path.join(addonfolder,"icon.png")))
+		xbmc.executebuiltin("Notification(%s,%s,%i,%s)" % ('Anonymous PVR Tools', 'Lists have been merged!', 1,os.path.join(addonfolder,"icon.png")))
 	return

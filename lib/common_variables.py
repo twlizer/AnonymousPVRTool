@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 import xbmc,xbmcgui,xbmcaddon,os,shutil,requests,time
 
-addon_id = 'service.pvrtools'
+addon_id = 'service.AnonymousPVRTools'
 
 selfAddon = xbmcaddon.Addon(id=addon_id)
 datapath = xbmc.translatePath(selfAddon.getAddonInfo('profile')).decode('utf-8')

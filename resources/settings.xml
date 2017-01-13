@@ -47,7 +47,7 @@
 		<setting id="xmltv10" label="XMLTV10 URL" type="text" default="" visible="true"/>
 		<setting id="xmltv11" label="XMLTV11 URL" type="text" default="" visible="true"/>
   </category>
-  <category label="PVR Tools">
+  <category label="Anonymous PVR Tools">
 		<setting id="merge_lists_now" type="action" label="Merge lists now" action="XBMC.RunScript($CWD/lib/update_lists.py,xmltvmerger)" />
 		<setting id="merge_epgs_now" type="action" label="Merge EPGS now" action="XBMC.RunScript($CWD/lib/update_xml.py,xmltvmerger)" />
 		<setting id="merge_epgs_lists_now" type="action" label="Merge lists + epgs and restart pvr" action="XBMC.RunScript($CWD/lib/update_all.py,xmltvmerger)" />
