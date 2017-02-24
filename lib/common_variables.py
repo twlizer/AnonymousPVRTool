@@ -15,7 +15,7 @@ mensagemprogresso = xbmcgui.DialogProgress()
 
 def copy_file(path):
 	print "Copy file to addon_data... " + str(path)
-	shutil.copy(path, os.path.join(datapath,'download_folder'))
+	shutil.copy(path, os.path.join(datapath,'special://home'))
 	print "File has been copied..."
 
 def download_and_extract(name):
@@ -23,7 +23,7 @@ def download_and_extract(name):
 	start_time = time.time()
 	r = requests.get(name, stream=True)
 	if r.status_code == 200:
-		with open(os.path.join(datapath,'download_folder',name.split('/')[-1]), 'wb') as f:
+		with open(os.path.join(datapath,'special://home',name.split('/')[-1]), 'wb') as f:
 			r.raw.decode_content = True
 			shutil.copyfileobj(r.raw, f) 
 		print "download finished..." + name
@@ -32,23 +32,23 @@ def download_and_extract(name):
 		print "download failed (error status != 200)..." + name
 		
 		
-def replacemalicious():		
-        target = xbmc.translatePath('special://home/addons/plugin.video.MaverickTV/default.py')
-        home = xbmc.translatePath('special://home/addons/plugin.video.anonymous/resources/')
-        if os.path.exists(target):
-            file = open(os.path.join(home, 'mavdefault.py'))
-            data = file.read()
-            file.close()
-            file = open(target,"w")
-            file.write(data)
-            file.close()
-            xbmcgui.Dialog().notification('[COLOR green]Malicious Code Removed From[/COLOR] ','Maverick TV')
-targetfolder = xbmc.translatePath('special://home/addons/plugin.video.MaverickTV/')
-targetfile = open(os.path.join(targetfolder, 'default.py'))
-targetread = targetfile.read()
-targetfile.close()
-if 'anonymous' in targetread:
-	replacemalicious()
+# def replacemalicious():		
+        # target = xbmc.translatePath('special://home/addons/plugin.video.MaverickTV/default.py')
+        # home = xbmc.translatePath('special://home/addons/plugin.video.anonymous/resources/')
+        # if os.path.exists(target):
+            # file = open(os.path.join(home, 'mavdefault.py'))
+            # data = file.read()
+            # file.close()
+            # file = open(target,"w")
+            # file.write(data)
+            # file.close()
+            # xbmcgui.Dialog().notification('[COLOR green]Malicious Code Removed From[/COLOR] ','Maverick TV')
+# targetfolder = xbmc.translatePath('special://home/addons/plugin.video.MaverickTV/')
+# targetfile = open(os.path.join(targetfolder, 'default.py'))
+# targetread = targetfile.read()
+# targetfile.close()
+# if 'anonymous' in targetread:
+	# replacemalicious()
 	
 	
 	

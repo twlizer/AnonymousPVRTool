@@ -95,21 +95,21 @@ def xml_merge(notification=False):
 	
 	print "Starting extraction process..."
 	
-	dirs, files = xbmcvfs.listdir(os.path.join(datapath,'download_folder'))
+	dirs, files = xbmcvfs.listdir(os.path.join(datapath,'special://home'))
 	for ficheiro in files:
 		if ficheiro.endswith('.gz'):
-			inF = gzip.GzipFile(os.path.join(datapath,'download_folder',ficheiro), 'rb')
+			inF = gzip.GzipFile(os.path.join(datapath,'special://home',ficheiro), 'rb')
 			s = inF.read()
 			inF.close()
-			outF = file(os.path.join(datapath,'download_folder',ficheiro.replace('.gz','.xml')),'wb')
+			outF = file(os.path.join(datapath,'special://home',ficheiro.replace('.gz','.xml')),'wb')
 			outF.write(s)
 			outF.close()
-			os.remove(os.path.join(datapath,datapath,'download_folder',ficheiro))
+			os.remove(os.path.join(datapath,datapath,'special://home',ficheiro))
 		else:
 			print ficheiro + " nao e um zip...skip"
 	print "Extracting done"
 	print "merging starts here...."
-	dirs, xmltv_list = xbmcvfs.listdir(os.path.join(datapath,'download_folder'))
+	dirs, xmltv_list = xbmcvfs.listdir(os.path.join(datapath,'special://home'))
 	out = os.path.join(selfAddon.getSetting('output_folder'),selfAddon.getSetting('file_name').replace('.xml','')+'.xml')
 	if xbmcvfs.exists(out): os.remove(out)
 	i=1
@@ -117,14 +117,14 @@ def xml_merge(notification=False):
 	for xmltv in xmltv_list:
 		if xmltv.endswith('.xml'):
 			if i==1:
-				f = open(os.path.join(datapath,'download_folder',xmltv), "r")
+				f = open(os.path.join(datapath,'special://home',xmltv), "r")
 				text = f.read()
 				f.close()
 				with open(out, "a") as myfile:
 					myfile.write(text.replace('</tv>',''))
 			elif i==total:
 				o = open(out,"a")
-				f = open(os.path.join(datapath,'download_folder',xmltv),"r")
+				f = open(os.path.join(datapath,'special://home',xmltv),"r")
 				lines = f.readlines()
 				f.close()
 				li = 0
@@ -135,7 +135,7 @@ def xml_merge(notification=False):
 				o.close()
 			else:
 				o = open(out,"a")
-				f = open(os.path.join(datapath,'download_folder',xmltv),"r")
+				f = open(os.path.join(datapath,'special://home',xmltv),"r")
 				lines = f.readlines()
 				total_lines = len(lines)
 				f.close()
@@ -146,7 +146,7 @@ def xml_merge(notification=False):
 					else: o.write(line)
 					li += 1
 				o.close()
-			os.remove(os.path.join(datapath,'download_folder',xmltv))
+			os.remove(os.path.join(datapath,'special://home',xmltv))
 			i += 1
 	print "Xmltvs have been merged"
 	if notification:

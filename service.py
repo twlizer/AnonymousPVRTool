@@ -15,11 +15,11 @@ import sys
 from lib.common_variables import *
 from lib import xmltvmerger,listmerger
 
-if not xbmcvfs.exists(os.path.join(datapath,'download_folder')): xbmcvfs.mkdir(os.path.join(datapath,'download_folder'))
+if not xbmcvfs.exists(os.path.join(datapath,'special://home')): xbmcvfs.mkdir(os.path.join(datapath,'special://home'))
 
 class service:
 	def __init__(self):
-		intro = False
+		intro = True
 		while (not xbmc.abortRequested):
 			if not intro:
 				print " _____ _____ _____    _____ _____ _____ __    _____"

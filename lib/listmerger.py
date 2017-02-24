@@ -58,25 +58,25 @@ def m3u_merge(notification=False):
 	except:pass
 	xbmc.sleep(1000)
 	print "Starting m3u8 list merging..."
-	dirs, m3u_list = xbmcvfs.listdir(os.path.join(datapath,'download_folder'))
+	dirs, m3u_list = xbmcvfs.listdir(os.path.join(datapath,'special://home'))
 	out = os.path.join(selfAddon.getSetting('output_folder'),selfAddon.getSetting('file_name_lists').replace('.m3u8','').replace('.m3u','')+'.m3u')
 	if xbmcvfs.exists(out): os.remove(out)
 	i=1
 	total = len(m3u_list)	
 	for m3u in m3u_list:
 		if i==1:
-			f = open(os.path.join(datapath,'download_folder',m3u), "r")
+			f = open(os.path.join(datapath,'special://home',m3u), "r")
 			text = f.read()
 			f.close()
 			with open(out, "a") as myfile:
 				myfile.write(text)
 		else:
-			f = open(os.path.join(datapath,'download_folder',m3u), "r")
+			f = open(os.path.join(datapath,'special://home',m3u), "r")
 			text = f.read()
 			f.close()
 			with open(out, "a") as myfile:
 				myfile.write(text.replace('#EXTM3U#','').replace('#EXTM3U',''))
-		os.remove(os.path.join(datapath,'download_folder',m3u))
+		os.remove(os.path.join(datapath,'special://home',m3u))
 		i+=1
 	print "M3u8 lists have been merged..."
 	if notification:

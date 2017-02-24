@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
   <category label="General">
-  		<setting id="output_folder" type="folder" label="Output folder" default=""/>
+  		
   		<setting label="M3U" type="lsep" />
  		<setting id="last_merge_m3u" type="text" default="1970-01-01 23:59:00.000000" visible="false"/>
-		<setting id="check_interval_m3u" label="Intervalo de merge das listas (horas)" type="slider" default="24" range="1,48" option="int" />
-  		<setting id="file_name_lists" label="M3U8 final file name (wo .m3u)" type="text" default="" visible="true"/>
+		<setting id="check_interval_m3u" label="Interval in (Hours)" type="slider" default="24" range="1,48" option="int" />
+  		<setting id="file_name_lists" label="M3U8 final file name (Do not add .m3u extension)" type="text" default="" visible="true"/>
 		<setting label="XMLTV" type="lsep" />
 		<setting id="last_merge" type="text" default="1970-01-01 23:59:00.000000" visible="false"/>
-		<setting id="check_interval" label="Intervalo de merge do epg (dias)" type="slider" default="6" range="1,15" option="int" />
-		<setting id="file_name" label="XMLTV final file name (wo .xml)" type="text" default="" visible="true"/>
+		<setting id="check_interval" label="Interval to merge epg (Days)" type="slider" default="6" range="1,15" option="int" />
+		<setting id="file_name" label="XMLTV final file name (Do not add .xml extension)" type="text" default="" visible="true"/>
 
   </category>
     <category label="M3U8 Lists">
