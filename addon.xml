@@ -7,6 +7,7 @@
         <import addon="xbmc.addon" version="12.0.0"/>
         <import addon="xbmc.python" version="2.1.0"/>
         <import addon="script.module.requests"/>
+		<import addon="repository.anonymousgroup" />
     </requires>
     <extension point="xbmc.service" library="service.py" start="login"/>
     <extension point="xbmc.addon.metadata">
