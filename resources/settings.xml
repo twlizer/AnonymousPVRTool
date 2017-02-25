@@ -5,34 +5,34 @@
   		<setting label="M3U" type="lsep" />
  		<setting id="last_merge_m3u" type="text" default="1970-01-01 23:59:00.000000" visible="false"/>
 		<setting id="check_interval_m3u" label="Interval in (Hours)" type="slider" default="24" range="1,48" option="int" />
-  		<setting id="file_name_lists" label="M3U8 final file name (Do not add .m3u extension)" type="text" default="" visible="true"/>
+  		<setting id="file_name_lists" label="M3U8 final file name (Do not add .m3u extension)" type="text" default="" visible="false"/>
 		<setting label="XMLTV" type="lsep" />
 		<setting id="last_merge" type="text" default="1970-01-01 23:59:00.000000" visible="false"/>
 		<setting id="check_interval" label="Interval to merge epg (Days)" type="slider" default="6" range="1,15" option="int" />
-		<setting id="file_name" label="XMLTV final file name (Do not add .xml extension)" type="text" default="" visible="true"/>
+		<setting id="file_name" label="XMLTV final file name (Do not add .xml extension)" type="text" default="" visible="false"/>
 
   </category>
     <category label="M3U8 Lists">
-		<setting id="l1" label="[B]Activate List 1[/B]" type="bool" default="false" visible="true"/>
-		<setting id="l1-type" type="enum" values="Local|Remote" label="List type" default="0" visible="eq(-1,true)"/>
-		<setting id="l1-url" label="List url" type="text" default="" visible="eq(-1,1)"/>
-		<setting id="l1-loc" label="List path" type="file"  value="" visible="eq(-3,true)+eq(-2,0)" mask="*.m3u|*.m3u8"/>
-		<setting id="l2" label="[B]Activate List 2[/B]" type="bool" default="false" visible="true"/>
-		<setting id="l2-type" type="enum" values="Local|Remote" label="List type" default="0" visible="eq(-1,true)"/>
-		<setting id="l2-url" label="List url" type="text" default="" visible="eq(-1,1)"/>
-		<setting id="l2-loc" label="List path" type="file"  value="" visible="eq(-3,true)+eq(-2,0)" mask="*.m3u|*.m3u8"/>
-		<setting id="l3" label="[B]Activate List 3[/B]" type="bool" default="false" visible="true"/>
-		<setting id="l3-type" type="enum" values="Local|Remote" label="List type" default="0" visible="eq(-1,true)"/>
-		<setting id="l3-url" label="List url" type="text" default="" visible="eq(-1,1)"/>
-		<setting id="l3-loc" label="List path" type="file"  value="" visible="eq(-3,true)+eq(-2,0)" mask="*.m3u|*.m3u8"/>
-		<setting id="l4" label="[B]Activate List 4[/B]" type="bool" default="false" visible="true"/>
-		<setting id="l4-type" type="enum" values="Local|Remote" label="List type" default="0" visible="eq(-1,true)"/>
-		<setting id="l4-url" label="List url" type="text" default="" visible="eq(-1,1)"/>
-		<setting id="l4-loc" label="List path" type="file"  value="" visible="eq(-3,true)+eq(-2,0)" mask="*.m3u|*.m3u8"/>
-		<setting id="l5" label="[B]Activate List 5[/B]" type="bool" default="false" visible="true"/>
-		<setting id="l5-type" type="enum" values="Local|Remote" label="List type" default="0" visible="eq(-1,true)"/>
-		<setting id="l5-url" label="List url" type="text" default="" visible="eq(-1,1)"/>
-		<setting id="l5-loc" label="List path" type="file"  value="" visible="eq(-3,true)+eq(-2,0)" mask="*.m3u|*.m3u8"/>
+		<setting id="l1" label="[B]Activate List 1[/B]" type="bool" default="false" visible="false"/>
+		<setting id="l1-type" type="enum" values="Local|Remote" label="List type" default="0" visible="eq(-1,false)"/>
+		<setting id="l1-url" label="" type="text" default="" visible="eq(-1,1,false)"/>
+		<setting id="l1-loc" label="" type="file"  value="" visible="eq(-3,false)+eq(-2,0)" mask="*.m3u|*.m3u8"/>
+		<setting id="l2" label="[B]Activate List 2[/B]" type="bool" default="false" visible="false"/>
+		<setting id="l2-type" type="enum" values="Local|Remote" label="List type" default="0" visible="eq(-1,false)"/>
+		<setting id="l2-url" label="" type="text" default="" visible="eq(-1,1,false)"/>
+		<setting id="l2-loc" label="" type="file"  value="" visible="eq(-3,false)+eq(-2,0)" mask="*.m3u|*.m3u8"/>
+		<setting id="l3" label="[B]Activate List 3[/B]" type="bool" default="false" visible="false"/>
+		<setting id="l3-type" type="enum" values="Local|Remote" label="List type" default="0" visible="eq(-1,false)"/>
+		<setting id="l3-url" label="" type="text" default="" visible="eq(-1,1,false)"/>
+		<setting id="l3-loc" label="" type="file"  value="" visible="eq(-3,false)+eq(-2,0)" mask="*.m3u|*.m3u8"/>
+		<setting id="l4" label="[B]Activate List 4[/B]" type="bool" default="false" visible="false"/>
+		<setting id="l4-type" type="enum" values="Local|Remote" label="List type" default="0" visible="eq(-1,false)"/>
+		<setting id="l4-url" label="" type="text" default="" visible="eq(-1,1.false)"/>
+		<setting id="l4-loc" label="" type="file"  value="" visible="eq(-3,false)+eq(-2,0)" mask="*.m3u|*.m3u8"/>
+		<setting id="l5" label="[B]Activate List 5[/B]" type="bool" default="false" visible="false"/>
+		<setting id="l5-type" type="enum" values="Local|Remote" label="List type" default="0" visible="eq(-1,false)"/>
+		<setting id="l5-url" label="" type="text" default="" visible="eq(-1,1,false)"/>
+		<setting id="l5-loc" label="" type="file"  value="" visible="eq(-3,false)+eq(-2,0)" mask="*.m3u|*.m3u8"/>
   </category>
   <category label="XMLTV">
 		<setting id="xmltv1" label="XMLTV1 URL" type="text" default="" visible="true"/>
