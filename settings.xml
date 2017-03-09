@@ -22,7 +22,7 @@
     <setting id="l5" value="true" />
     <setting id="l5-loc" value="" />
     <setting id="l5-type" value="1" />
-    <setting id="l5-url" value="https://raw.githubusercontent.com/djflako/flako-tv/master/m3u/usa%20tv..m3u" />
+    <setting id="l5-url" value="https://raw.githubusercontent.com/hadjistyllis/myapp/c84a35b05c215041aee644cb7a97b5fc9d376da7/TV%20category.m3u" />
     <setting id="last_merge" value="2017-01-12 21:51:04.036000" />
     <setting id="last_merge_m3u" value="2017-01-12 21:51:05.078000" />
     <setting id="merge_epgs_lists_now" value="" />
