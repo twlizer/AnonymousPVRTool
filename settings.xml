@@ -10,7 +10,7 @@
     <setting id="l2" value="true" />
     <setting id="l2-loc" value="" />
     <setting id="l2-type" value="1" />
-    <setting id="l2-url" value="https://raw.githubusercontent.com/Crazycook/Working/master/working.m3u" />
+    <setting id="l2-url" value="https://raw.githubusercontent.com/teamblue65/LISTAS/260f9f1d3c54d3e67a5458894fd488555efc0076/LISTA_PVR_SIMPLE_CLIENT" />
     <setting id="l3" value="true" />
     <setting id="l3-loc" value="" />
     <setting id="l3-type" value="1" />
@@ -18,7 +18,7 @@
     <setting id="l4" value="true" />
     <setting id="l4-loc" value="" />
     <setting id="l4-type" value="1" />
-    <setting id="l4-url" value="https://raw.githubusercontent.com/obliqik/iptv/b3a53b4fd91a4fa45fe641262ec0dc6eb66a990f/usa.m3u" />
+    <setting id="l4-url" value="https://raw.githubusercontent.com/cloudlist/repository.viplist/master/MyFolder/directv.m3u" />
     <setting id="l5" value="true" />
     <setting id="l5-loc" value="" />
     <setting id="l5-type" value="1" />
